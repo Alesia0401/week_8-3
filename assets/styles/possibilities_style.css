@@ -1,0 +1,279 @@
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0 0;
+  padding: 0 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header-container {
+  max-width: 1290px;
+  margin-left: 76px;
+}
+
+.nav,
+main,
+.menu {
+  display: flex;
+}
+
+.nav {
+  justify-content: space-between;
+  padding-top: 50px;
+}
+
+.nav__button,
+.subject__name1,
+.card__name,
+.contakt__name {
+  font-family: "Russo One", sans-serif;
+  font-weight: 400;
+}
+
+.nav__button,
+.contakt__button {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 100%;
+  color: #ffffff;
+  background: #5222d0;
+  border-radius: 100px;
+  border: none;
+}
+
+.nav__button {
+  position: relative;
+  width: 115px;
+  height: 38px;
+  padding: 10px 30px 10px 10px;
+}
+
+.nav__button::after {
+  content: url("../images/basket.svg");
+  position: absolute;
+  left: 68%;
+  top: 25%;
+}
+
+.nav__button:hover,
+.contakt__button:hover {
+  background: rgba(0, 0, 0, 0);
+  background-color: #da3b3b;
+  color: rgb(19, 18, 18);
+  box-shadow: inset 0 0 0 3px rgb(17, 16, 16);
+}
+
+.nav__button:active {
+  background-color: #da3b3b;
+}
+
+.main-container,
+.footer-container {
+  max-width: 1241px;
+  margin-left: 125px;
+}
+
+.subject {
+  margin-top: 89px;
+}
+
+.subject__name1 {
+  font-size: 60px;
+  line-height: 120%;
+  text-transform: uppercase;
+  padding-bottom: 40px;
+}
+
+.possibilities-container {
+  max-width: 1241px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(365px, 1fr));
+  /*
+  grid-template-columns: repeat(3, 365px);*/
+  column-gap: 71px;
+  row-gap: 50px;
+}
+
+.card__name,
+.contakt__name {
+  padding: 10px 0;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+
+.card__name,
+.nothing__name {
+  color: #000000;
+}
+
+.card__text,
+.menu__tex {
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+}
+
+.card__text {
+  font-size: 20px;
+  line-height: 160%;
+  color: #000000;
+}
+
+.contakt {
+  padding: 0 25px;
+  background-color: #da3b3b;
+}
+
+.contakt__name {
+  color: white;
+}
+
+.contakt__email {
+  width: 315px;
+  margin: 6px 0 23px;
+  padding: 9px 0 9px 14px;
+  font-family: "Roboto Slab";
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 160%;
+  color: #000000;
+  border: none;
+}
+
+.contakt__button {
+  width: 135px;
+  height: 38px;
+  padding: 10px;
+  margin-bottom: 55px;
+}
+
+.contakt__button:active {
+  background-color: #000000;
+}
+
+.menu {
+  padding-top: 146px;
+}
+
+.menu__page {
+  padding-right: 34px;
+}
+
+.menu__text {
+  font-size: 18px;
+  line-height: 160%;
+  color: #000000;
+}
+
+.menu__text:active {
+  color: #5222d0;
+}
+
+.menu__page:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1023px) {
+  .header-container {
+    max-width: 1000px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .main-container,
+  .footer-container,
+  .possibilities-container {
+    max-width: 1000px;
+    margin-left: 99px;
+    margin-right: 50px;
+  }
+
+  .main-container,
+  .footer-container {
+    margin-left: 99px;
+  }
+
+  .possibilities-container {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .possibilities-container {
+    max-width: 700px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .header-container,
+  .main-container,
+  .footer-container {
+    max-width: 350px;
+    margin-left: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .possibilities-container {
+    max-width: 350px;
+    margin-right: 0;
+    grid-template-columns: 330px;
+  }
+
+  .nav__logo img {
+    width: 80%;
+  }
+
+  .subject__name {
+    font-size: 30px;
+  }
+
+  .card__image {
+    width: 90%;
+  }
+
+  .card__name {
+    font-size: 25px;
+  }
+  .card__text {
+    font-size: 15px;
+  }
+
+  .contakt {
+    width: 330px;
+  }
+
+  .contakt__email {
+    width: 280px;
+  }
+
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    row-gap: 10px;
+    padding-top: 100px;
+  }
+}
